@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="perfil-container">
+        <div class="perfil-header">
+            <div class="perfil-title">
+                <h2>Perfil de Usuario</h2>
+                <p class="subtitle">Información personal</p>
+            </div>
+            
+            <div class="perfil-foto">
+                <div class="foto-container">
+                    <img id="profile-picture" src="Pepe.jfif" alt="Foto de Perfil">
+                    <div class="overlay">
+                        <label for="file-input" class="edit-icon" title="Cambiar foto">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/*">
+            </div>
+        </div>
+
+        <div class="perfil-content">
+            <div class="perfil-info">
+                <div class="info-section">
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-user"></i></div>
+                        <div class="info-text">
+                            <label>Nombre</label>
+                            <p id="user-first-name">Luis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-user-tag"></i></div>
+                        <div class="info-text">
+                            <label>Apellido</label>
+                            <p id="user-last-name">Angel</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <label>Correo</label>
+                            <p id="user-email">luisangel@ejemplo.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-text">
+                            <label>Teléfono</label>
+                            <p id="user-phone">+52 123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <label>Dirección</label>
+                            <p id="user-address">Calle Ejemplo #123, Ciudad, País</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-group">
+                        <div class="info-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <div class="info-text">
+                            <label>Fecha de Nacimiento</label>
+                            <p id="user-dob">01/01/1990</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="edit-profile" class="btn-edit">
+                    <i class="fas fa-pen"></i> Editar Perfil
+                </button>
+            </div>
+            
+            <div class="perfil-editar">
+                <h3>Editar información</h3>
+                <form id="edit-form">
+                    <div class="form-group">
+                        <label for="edit-first-name">Nombre</label>
+                        <input type="text" id="edit-first-name" value="Luis">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-last-name">Apellido</label>
+                        <input type="text" id="edit-last-name" value="Angel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-email">Correo</label>
+                        <input type="email" id="edit-email" value="luisangel@ejemplo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-phone">Teléfono</label>
+                        <input type="tel" id="edit-phone" value="+52 123 456 7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-address">Dirección</label>
+                        <input type="text" id="edit-address" value="Calle Ejemplo #123, Ciudad, País">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-dob">Fecha de Nacimiento</label>
+                        <input type="date" id="edit-dob" value="1990-01-01">
+                    </div>
+                    
+                    <div class="actions">
+                        <button type="submit" id="save-changes" class="btn-save">
+                            <i class="fas fa-save"></i> Guardar
+                        </button>
+                        <button type="button" id="cancel-edit" class="btn-cancel">
+                            <i class="fas fa-times"></i> Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
